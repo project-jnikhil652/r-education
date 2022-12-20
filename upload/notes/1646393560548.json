@@ -1,0 +1,398 @@
+{
+	"info": {
+		"_postman_id": "c51cd7a3-9b85-433f-9cf8-6d32c8f3885b",
+		"name": "Maid",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"shadab\",\r\n    \"email\":\"raviflyweis@gmail.com\",\r\n    \"number\":\"8240139993\",\r\n    \"Password\":\"shadab\",\r\n    \"cnfrmpass\":\"shadab\",\r\n    \"city\":\"noida\",\r\n    \"area\":\"noida sector 62\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4999/api/adduser"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4999/api/getuser"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4999/api/getuserbyid/6204f008d868849df997a02c"
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"akhtar\",\r\n    \"email\":\"node1flyweis@gmail.com\",\r\n    \"number\":\"9811148575\",\r\n    \"city\":\"delhi\",\r\n    \"area\":\"mayur vihar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4999/api/updateuser/61fcdeff23e2a742d5c19bfd"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:4999/api/deleteuser/61fcdeff23e2a742d5c19bfd"
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"maidflyweis@gmail.com\",\r\n    \"Password\":\"shadab\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4999/api/userlogin"
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"raviflyweis@gmail.com\",\r\n    \"Password\":\"ravi1234\",\r\n    \"cnfrmpass\":\"ravi1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4999/api/changepassword"
+					},
+					"response": []
+				},
+				{
+					"name": "send otp on number",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\":\"7088148604\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://maid-1.herokuapp.com/api/sendotp"
+					},
+					"response": []
+				},
+				{
+					"name": "verify otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\":\"+917088148604\",\r\n    \"otp\":\"0AS4V\",\r\n    \"Password\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4999/api/verifyOtp"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Help And Support",
+			"item": [
+				{
+					"name": "Add Help And Support",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"shadab akhtar\",\r\n    \"email\":\"akhtarshadab37@gmail.com\",\r\n    \"phone\":\"7088148604\",\r\n    \"Query\":\"that's a very  bad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4999/api/addsupport"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Help And Support",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4999/api/getsupport"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Package",
+			"item": [
+				{
+					"name": "add package",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "packageImage",
+									"type": "file",
+									"src": "/C:/Users/FLYWEIS/Desktop/8644506934019071635.gif"
+								},
+								{
+									"key": "text",
+									"value": "asdfds sadf asdf adsfa dfa f",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:4999/api/addpackage"
+					},
+					"response": []
+				},
+				{
+					"name": "get package",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4999/api/getpackage"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "add contact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"nishant\",\r\n    \"age\":\"14\",\r\n    \"relation\":\"brother\",\r\n    \"education\":\"high schoool fail\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4999/api/addcontact"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Maid",
+			"item": [
+				{
+					"name": "add maid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyMGI0N2VhMzU2NTFhNDE1YjlhYTk4NCIsIm5hbWUiOiJtYWlkIiwiZW1haWwiOiJtYWlkZmx5d2Vpc0BnbWFpbC5jb20iLCJudW1iZXIiOiIrOTE4MjQwMTM5OTkzIiwiUGFzc3dvcmQiOiIkMmIkMTUkSEJsNVEwdWdXZlZ3MlhDWGg4N2ROT3NSMGRHRUU0dEliMEdxRlVMVW5LT3FRWUk1MjVFUVciLCJjaXR5Ijoibm9pZGEiLCJhcmVhIjoibm9pZGEgc2VjdG9yIDYyIiwiY3JlYXRlZEF0IjoiMjAyMi0wMi0xNVQwNjoyNzo1NC41NzBaIiwidXBkYXRlZEF0IjoiMjAyMi0wMi0xNVQwNjoyNzo1NC41NzBaIiwiX192IjowfSwiaWF0IjoxNjQ0OTEwNDgwLCJleHAiOjE2NDU1MTUyODB9.c_CxXbSoz9FId36dDyYfImjh49jZYNSVVO04ynI5yE0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"26/10/1996\",\r\n    \"membershipno\":123456789,\r\n    \"fullname\":\"shadab\",\r\n    \"gender\":\"male\",\r\n    \"ressidencialaddress\":\"noida\",\r\n    \"permanentaddress\":\"noida\",\r\n    \"nomineename\":\"nishant\",\r\n    \"nomineerelation\":\"brother\",\r\n    \"DOB\":\"26/10/1996\",\r\n    \"age\":25,\r\n    \"contactname\":\"jatin\",\r\n    \"contactage\":24,\r\n    \"contactrelation\":\"employee\",\r\n    \"contactEducation\":\"MCA\",\r\n    \"relation\":\"employee\",\r\n    \"vaterid\":\"gsty36dbed76dsh\",\r\n    \"home\":\"banaras\",\r\n    \"adharcard\":\"66067330158\",\r\n    \"bankaccount\":\"4880101002063\",\r\n    \"pancard\":\"CTTPAN*&&F\",\r\n    \"Other\":\"ndvfdsbfsadbfjkasdgfkjasdvuif\",\r\n    \"location\":\"delhi\",\r\n    \"typeofworker\":\"maid\",\r\n    \"salary\":\"1000000\",\r\n    \"phone\":7088148604\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4999/api/addmaid"
+					},
+					"response": []
+				},
+				{
+					"name": "get maid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyMGI0N2VhMzU2NTFhNDE1YjlhYTk4NCIsIm5hbWUiOiJtYWlkIiwiZW1haWwiOiJtYWlkZmx5d2Vpc0BnbWFpbC5jb20iLCJudW1iZXIiOiIrOTE4MjQwMTM5OTkzIiwiUGFzc3dvcmQiOiIkMmIkMTUkSEJsNVEwdWdXZlZ3MlhDWGg4N2ROT3NSMGRHRUU0dEliMEdxRlVMVW5LT3FRWUk1MjVFUVciLCJjaXR5Ijoibm9pZGEiLCJhcmVhIjoibm9pZGEgc2VjdG9yIDYyIiwiY3JlYXRlZEF0IjoiMjAyMi0wMi0xNVQwNjoyNzo1NC41NzBaIiwidXBkYXRlZEF0IjoiMjAyMi0wMi0xNVQwNjoyNzo1NC41NzBaIiwiX192IjowfSwiaWF0IjoxNjQ0OTEwNDgwLCJleHAiOjE2NDU1MTUyODB9.c_CxXbSoz9FId36dDyYfImjh49jZYNSVVO04ynI5yE0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4999/api/getmaid"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Maid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxZmNlNWYzOThiMWNkOTZlNGI5ZTFhNCIsIm5hbWUiOiJzaGFkYWIiLCJlbWFpbCI6Im5vZGUxZmx5d2Vpc0BnbWFpbC5jb20iLCJQYXNzd29yZCI6IiQyYiQxMCR1eElzNDh1dG9rSVB5UTk2Y0d5Z2suVGs3Y1ZNSzRUWVk1RXlSdU5PcHNlTzlZZ3dGVlUyRyIsImNpdHkiOiJub2lkYSIsImFyZWEiOiJub2lkYSBzZWN0b3IgNjIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA0VDA4OjM4OjExLjI3OFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTAyLTA0VDA5OjAwOjQ1LjI1MVoiLCJfX3YiOjB9LCJpYXQiOjE2NDQzOTE3OTYsImV4cCI6MTY0NDk5NjU5Nn0.-vHrNAWtd5jbJhDGuJyx-PLHixDM84iRZLnWcEtH8Yc"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:4999/api/deletemaid"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "get maid all contact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyMGI0N2VhMzU2NTFhNDE1YjlhYTk4NCIsIm5hbWUiOiJtYWlkIiwiZW1haWwiOiJtYWlkZmx5d2Vpc0BnbWFpbC5jb20iLCJudW1iZXIiOiIrOTE4MjQwMTM5OTkzIiwiUGFzc3dvcmQiOiIkMmIkMTUkSEJsNVEwdWdXZlZ3MlhDWGg4N2ROT3NSMGRHRUU0dEliMEdxRlVMVW5LT3FRWUk1MjVFUVciLCJjaXR5Ijoibm9pZGEiLCJhcmVhIjoibm9pZGEgc2VjdG9yIDYyIiwiY3JlYXRlZEF0IjoiMjAyMi0wMi0xNVQwNjoyNzo1NC41NzBaIiwidXBkYXRlZEF0IjoiMjAyMi0wMi0xNVQwNjoyNzo1NC41NzBaIiwiX192IjowfSwiaWF0IjoxNjQ0OTA5Njc5LCJleHAiOjE2NDU1MTQ0Nzl9.blRkuUEAskREY96GQ-1EVTdypDGw2f5YAVjfpXqfVKM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4999/api/getcontact"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "admin otp send on mail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"node1flyweis@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4999/api/adminmailsend"
+					},
+					"response": []
+				},
+				{
+					"name": "admin forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"node1flyweis@gmail.com\",\r\n    \"otp\":\"d2zc\",\r\n    \"password\":\"shadab\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4999/api/adminforgotpassword"
+					},
+					"response": []
+				},
+				{
+					"name": "admin login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"node1flyweis@gmail.com\",\r\n    \"password\":\"shadab\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4999/api/adminlogin"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:4999"
+		},
+		{
+			"key": "baseUrl",
+			"value": "https://maid-1.herokuapp.com"
+		}
+	]
+}
